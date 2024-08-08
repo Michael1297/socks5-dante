@@ -20,11 +20,11 @@ method: username none
 user.privileged: root
 user.notprivileged: nobody
 client pass {
-    from: 0.0.0.0/0 to: 0.0.0.0/0
+    from: 0/0 to: 0/0
     log: connect disconnect error
 }
 socks pass {
-    from: 0.0.0.0/0 to: 0.0.0.0/0
+    from: 0/0 to: 0/0
     log: connect disconnect error
 }
 EOF'
