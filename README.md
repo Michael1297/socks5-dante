@@ -25,5 +25,5 @@ apt-get install curl
 
 You can then test the proxy with:
 ```
-curl -x socks5://username:password@proxy_server_ip:1080 https://ifconfig.me
+curl -x socks5://username:password@proxy_server_ip:9098 https://ifconfig.me
 ```
