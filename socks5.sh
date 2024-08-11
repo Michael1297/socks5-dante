@@ -15,8 +15,9 @@ sudo apt install ufw iptables dante-server -y
 sudo bash -c 'cat <<EOF > /etc/danted.conf
 logoutput: /var/log/danted.log
 internal: 0.0.0.0 port = 9098
+internal: 0:0:0:0:0:0:0:0 port = 9098
 external: eth0
-method: username none
+socksmethod: username none
 user.privileged: root
 user.notprivileged: nobody
 client pass {
