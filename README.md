@@ -27,3 +27,7 @@ You can then test the proxy with:
 ```
 curl -x socks5://username:password@proxy_server_ip:9098 https://ifconfig.me
 ```
+OR
+``` 
+curl -x socks5h://username:password@proxy_server_ip:9098 https://ifconfig.me
+```
