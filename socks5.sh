@@ -15,7 +15,7 @@ sudo apt install ufw iptables dante-server -y
 sudo bash -c 'cat <<EOF > /etc/danted.conf
 logoutput: /var/log/danted.log
 internal: 0.0.0.0 port = 9098
-internal: 0:0:0:0:0:0:0:0 port = 9098
+internal: :: port = 9098
 external: eth0
 socksmethod: username none
 user.privileged: root
@@ -25,7 +25,11 @@ client pass {
     log: connect disconnect error
 }
 socks pass {
-    from: 0/0 to: 0/0
+    from: 0.0.0.0/0 to: 0.0.0.0/0
+    log: connect disconnect error
+}
+socks pass {
+    from: ::/0 to: ::/0
     log: connect disconnect error
 }
 EOF'
